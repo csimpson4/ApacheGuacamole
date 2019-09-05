@@ -32,11 +32,11 @@ wget http://sourceforge.net/projects/guacamole/files/current/binary/guacamole-0.
 
 mv guacamole-0.9.9.war /var/lib/tomcat7/webapps/guacamole.war
 
-mkdir /usr/share/tomcat7/.guacamole
+sudo mkdir /usr/share/tomcat7/.guacamole
 
-mkdir /etc/guacamole/
+sudo mkdir /etc/guacamole/
 
-cp resources/guacamole.properties /etc/guacamole/guacamole.properties
+sudo cp resources/guacamole.properties /etc/guacamole/guacamole.properties
 
 ln -s /etc/guacamole/guacamole.properties /usr/share/tomcat7/.guacamole/
 
@@ -60,8 +60,8 @@ cp resources/server.xml /etc/tomcat7/server.xml
 
 cp resources/web.xml /etc/tomcat7/web.xml
 
-mv resources/sshd_config /etc/ssh/sshd_config
-mv resources/guac /etc/cron.d/guac
+sudo mv resources/sshd_config /etc/ssh/sshd_config
+sudo mv resources/guac /etc/cron.d/guac
 
 service tomcat7 start
 
